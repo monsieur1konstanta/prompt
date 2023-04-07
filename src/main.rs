@@ -21,7 +21,7 @@ fn main() {
     // handle args
     if args.len() > 2 {
         match args[1].as_str() {
-            "-n" => {
+            "-c" => {
                 let key = &args[3];
 
                 let mut value = String::new();
