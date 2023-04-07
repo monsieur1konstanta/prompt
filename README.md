@@ -8,3 +8,8 @@ $ prompt -r -- <prompt name> - delete already exists prompt
 
 $ prompt -- <prompt name> - prints prompt by name
 ```
+Don't forget to add an env variable:
+```bash
+$ export PROMPT_DIR_DEFAULT=<path/to/dir>
+```
+If that variable is specified, program should create a json file right into that folder.
