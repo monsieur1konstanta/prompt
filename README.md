@@ -7,6 +7,8 @@ $ prompt -c -- <prompt name> - create new prompt
 $ prompt -r -- <prompt name> - delete already exists prompt
 
 $ prompt -- <prompt name> - prints prompt by name
+
+$ prompt -l - key-value pairs list
 ```
 Don't forget to add an env variable:
 ```bash
