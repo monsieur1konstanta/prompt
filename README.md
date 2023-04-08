@@ -10,7 +10,7 @@ $ prompt -- <prompt name> - prints prompt by name
 
 $ prompt -l - key-value pairs list
 ```
-Don't forget to add an env variable:
+Don't forget to add the env variable:
 ```bash
 $ export PROMPT_DIR_DEFAULT=<path/to/dir>
 ```
