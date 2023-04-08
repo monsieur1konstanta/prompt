@@ -54,7 +54,7 @@ fn main() {
                 // Insert key-value pair into storage
                 storage.insert(key.trim().to_string(), value);
                 // Save storage to file
-                save_storage(&storage, default_path.clone());
+                save_storage(&storage, default_path);
             }
             // If the first argument is "-r"
             "-r" => {
@@ -62,7 +62,7 @@ fn main() {
                 let key = &args[3];
                 // Remove key-value pair from storage and save to file if something was removed
                 if storage.remove(key).is_some() {
-                    save_storage(&storage, default_path.clone());
+                    save_storage(&storage, default_path);
                 }
             },
             // Otherwise
