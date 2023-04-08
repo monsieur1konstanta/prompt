@@ -18,6 +18,19 @@ fn main() {
         default_path.clone()
     );
 
+    // handle -l command
+    if args.len() == 2 {
+        if args[1].as_str().eq("-l") {
+            println!("{:-^47}", "Key Value(first 40 charts) List");
+            let mut values = storage.iter().map(|(k, v)| (k.clone(), v.clone())).collect::<Vec<_>>();
+            values.sort();
+
+            for (key, value) in values {
+                println!("KEY:   {}\nVALUE: {:.40}\n", key, value)
+            }
+        }
+    }
+
     // handle args
     if args.len() > 2 {
         match args[1].as_str() {
@@ -35,7 +48,7 @@ fn main() {
                 if storage.remove(key).is_some() {
                     save_storage(&storage, default_path.clone());
                 }
-            }
+            },
             _ => {
                 let key = &args[2];
                 if let Some(value) = storage.get(key) {
